@@ -27,7 +27,7 @@ export default (function State() {
 			bs.pipe(takeUntil(s)).subscribe(f)
 
 			return () => {
-				s.next()
+				s.next(undefined)
 				s.complete()
 			}
 		}
